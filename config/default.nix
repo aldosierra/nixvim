@@ -3,6 +3,7 @@
   imports = [
     ./options.nix
     ./clipboard.nix
+    ./keybind.nix
     ./colorscheme.nix
     ./plugins.nix
   ];
