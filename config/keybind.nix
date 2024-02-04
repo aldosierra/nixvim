@@ -7,7 +7,7 @@
     { mode = "n"; key = "<leader><Tab>"; action = "<cmd>bn<CR>"; }
     { mode = "n"; key = "<leader><S-Tab>"; action = "<cmd>bp<CR>"; }
     # File explerer
-    { mode = "n"; key = "<leader>fe"; action = "<cmd>Ex<CR>"; }
+    { mode = "n"; key = "<leader>fe"; action = "<cmd>NvimTreeToggle<CR>"; }
     # Move between clients
     { mode = "n"; key = "<leader>wv"; action = "<cmd>vs<CR>"; }
     { mode = "n"; key = "<leader>ws"; action = "<cmd>sp<CR>"; }
