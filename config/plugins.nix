@@ -50,11 +50,12 @@
     # Better file explorer
     nvim-tree = {
       enable = true;
-      autoClose = true;
+      autoClose = false;
       actions.openFile.quitOnOpen = true;
-      autoReloadOnWrite = true;
+      hijackUnnamedBufferWhenOpening = true;
+      openOnSetupFile = true;
       openOnSetup = true;
-      hijackNetrw = true;
+      autoReloadOnWrite = true;
       hijackCursor = true;
       git = {
         enable = true;
@@ -95,13 +96,30 @@
           vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
         end
       '';
+      onAttach = ''
+          local opts = {buffer = bufnr, remap = false}
+          vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
+          vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+          vim.keymap.set("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+          vim.keymap.set("n", "<leader>[", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+          vim.keymap.set("n", "<leader>]", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+          vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", opts)
+          vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", opts)
+          vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts)
+          vim.keymap.set("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts)
+      '';
     };
 
     # Add symbols to lsp
     lspkind.enable = true;
 
     # Add lsp saga
-    lspsaga.enable = true;
+    lspsaga = {
+      enable = true;
+      lightbulb.sign = false;
+      outline.autoClose = true;
+      codeAction.extendGitSigns = true;
+    };
 
     # Autocomplete
     nvim-cmp = {
