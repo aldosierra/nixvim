@@ -4,14 +4,14 @@
     # Tabs for buffers
     bufferline.enable = true;
 
-    # Tree file manager
-    # chadtree.enable = true;
-
     # Syntax highlighting
     treesitter = {
       enable = true;
       indent = true;
     };
+
+    # Autotag
+    ts-autotag.enable = true;
 
     # Better status line
     lualine = {
@@ -80,10 +80,28 @@
         bashls.enable = true;
         # Emmet server
         emmet_ls.enable = true;
+        # HTML Server
+        html.enable = true;
         # Markdown server
         marksman.enable = true;
       };
+      capabilities = ''
+         vim.lsp.protocol.make_client_capabilities().textDocument.completion.completionItem.snippetSupport = true
+      '';
+      postConfig = ''
+        local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+        for type, icon in pairs(signs) do
+          local hl = "DiagnosticSign" .. type
+          vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+        end
+      '';
     };
+
+    # Add symbols to lsp
+    lspkind.enable = true;
+
+    # Add lsp saga
+    lspsaga.enable = true;
 
     # Autocomplete
     nvim-cmp = {
@@ -126,6 +144,12 @@
       enable = true;
       checkTs = true;
     };
+
+    # Git signs
+    gitsigns.enable = true;
+
+    # Indent lines
+    indent-blankline.enable = true;
   };
 }
 
