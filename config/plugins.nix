@@ -107,6 +107,7 @@
           vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", opts)
           vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts)
           vim.keymap.set("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts)
+          vim.keymap.set("n", "<leader>lt", "<cmd>Lspsaga term_toggle<CR>", opts)
       '';
     };
 
