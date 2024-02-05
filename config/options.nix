@@ -16,5 +16,10 @@
     ignorecase = true;
     smartcase = true;
     showmatch = true;
+    # Sign column
+    signcolumn = "yes";
+    # Split windows
+    splitbelow = true;
+    splitright = true;
   };
 }
