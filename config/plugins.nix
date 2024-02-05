@@ -8,7 +8,10 @@
     # chadtree.enable = true;
 
     # Syntax highlighting
-    treesitter.enable = true;
+    treesitter = {
+      enable = true;
+      indent = true;
+    };
 
     # Better status line
     lualine = {
@@ -57,6 +60,71 @@
         enable = true;
         ignore = true;
       };
+    };
+
+    # Language servers
+    lsp = {
+      enable = true;
+      servers = {
+        # Javascript / typescript server
+        tsserver.enable = true;
+        # Lua server
+        lua-ls.enable = true;
+        # Python server
+        pyright.enable = true;
+        # Nix server
+        nil_ls.enable = true;
+        # C/C++ server
+        clangd.enable = true;
+        # Bash server
+        bashls.enable = true;
+        # Emmet server
+        emmet_ls.enable = true;
+        # Markdown server
+        marksman.enable = true;
+      };
+    };
+
+    # Autocomplete
+    nvim-cmp = {
+      enable = true;
+      autoEnableSources = true;
+      sources = [
+        { name = "nvim_lsp"; }
+        { name = "path"; }
+        { name = "buffer"; }
+      ];
+      mapping = {
+        "<C-Space>" = "cmp.mapping.complete()";
+        "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+        "<C-e>" = "cmp.mapping.close()";
+        "<C-f>" = "cmp.mapping.scroll_docs(4)";
+        "<CR>" = "cmp.mapping.confirm({ select = true })";
+        "<S-Tab>" = {
+          action = "cmp.mapping.select_prev_item()";
+          modes = [
+            "i"
+            "s"
+          ];
+        };
+        "<Tab>" = {
+          action = "cmp.mapping.select_next_item()";
+          modes = [
+            "i"
+            "s"
+          ];
+        };
+      };
+      snippet.expand = "luasnip";
+    };
+
+    # Snippet manager
+    luasnip.enable = true;
+
+    # Autopairs
+    nvim-autopairs = {
+      enable = true;
+      checkTs = true;
     };
   };
 }
