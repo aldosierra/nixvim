@@ -53,7 +53,7 @@
       autoClose = false;
       actions.openFile.quitOnOpen = true;
       hijackUnnamedBufferWhenOpening = true;
-      openOnSetupFile = true;
+      openOnSetupFile = false;
       openOnSetup = true;
       autoReloadOnWrite = true;
       hijackCursor = true;
