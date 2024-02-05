@@ -18,6 +18,7 @@
     # Close and save
     { mode = "n"; key = "<leader>wq"; action = "<cmd>q<CR>"; }
     { mode = "n"; key = "<leader>ww"; action = "<cmd>w<CR>"; }
+    { mode = "n"; key = "<leader>wb"; action = "<cmd>bd<CR>"; }
     # Move lines up and down
     { mode = "v"; key = "J"; action = "<cmd>m '>+1<CR>gv=gv"; }
     { mode = "v"; key = "K"; action = "<cmd>m '>-2<CR>gv=gv"; }
