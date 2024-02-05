@@ -1,17 +1,21 @@
-# Nixvim template
+# Nixvim config
 
-This template gives you a good starting point for configuring nixvim standalone.
+My personal neovim config with nixvim.
 
-## Configuring
+## Index
+- [ Change configuration. ](#change-configuration)
+- [ Testing your new configuration. ](#testing-your-new-configuration)
 
-To start configuring, just add or modify the nix files in `./config`.
+## Change configuration.
+
+To modify configuring, just add or modify nix files in `./config`.
 If you add a new configuration file, remember to add it to the
-[`config/default.nix`](./config/default.nix) file
+[`config/default.nix`](./config/default.nix) file.
 
-## Testing your new configuration
+## Testing your new configuration.
 
-To test your configuration simply run the following command
+To test your configuration simply run the following command.
 
-```
+```console
 nix run .
 ```
