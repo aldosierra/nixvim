@@ -2,7 +2,18 @@
   plugins = {
     
     # Tabs for buffers
-    bufferline.enable = true;
+    bufferline = {
+      enable = true;
+      indicator.style = "underline";
+      # highlights.offsetSeparator = {
+      #   offsets = {
+      #     filetype = "NvimTree";
+      #     text = "Nvim Tree";
+      #     separator = true;
+      #     text_align = "left";
+      #   };
+      # };
+    };
 
     # Syntax highlighting
     treesitter = {
@@ -32,6 +43,10 @@
           action = "live_grep";
           desc = "Telescope live grep";
         };
+        "<leader>fs" = {
+          action = "grep_string";
+          desc = "Telescope grep string";
+        };
         "<leader>fb" = {
           action = "buffers";
           desc = "Telescope buffers files";
@@ -45,6 +60,7 @@
           desc = "Telescope git files";
         };
       };
+      extensions.fzf-native.enable = true;
     };
 
     # Better file explorer
