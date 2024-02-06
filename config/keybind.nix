@@ -34,5 +34,7 @@
     { mode = "n"; key = "<leader>Y"; action = "\"+Y"; }
     # Make file executable
     { mode = "n"; key = "<leader>x"; action = "<cmd>!chmod +x %<CR>"; options.silent = true; }
+    # Toggle scope indent
+    { mode = "n"; key = "<leader>wq"; action = "<cmd>IBLToggleScope<CR>"; }
   ];
 }
