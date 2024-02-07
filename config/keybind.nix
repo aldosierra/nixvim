@@ -20,8 +20,8 @@
     { mode = "n"; key = "<leader>ww"; action = "<cmd>w<CR>"; }
     { mode = "n"; key = "<leader>wb"; action = "<cmd>bd<CR>"; }
     # Move lines up and down
-    { mode = "v"; key = "J"; action = "<cmd>m '>+1<CR>gv=gv"; }
-    { mode = "v"; key = "K"; action = "<cmd>m '>-2<CR>gv=gv"; }
+    { mode = "v"; key = "J"; action = ":m '>+1<CR>gv=gv"; }
+    { mode = "v"; key = "K"; action = ":m '<-2<CR>gv=gv"; }
     # Indent and keep the selection
     { mode = "v"; key = ">"; action = ">gv"; }
     { mode = "v"; key = "<"; action = "<gv"; }
