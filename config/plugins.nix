@@ -59,6 +59,10 @@
           action = "git_files";
           desc = "Telescope git files";
         };
+        "<leader>fm" = {
+          action = "man_pages";
+          desc = "Telescope man pages";
+        };
       };
       extensions.fzf-native.enable = true;
     };
@@ -88,7 +92,7 @@
         # Lua server
         lua-ls.enable = true;
         # Python server
-        pyright.enable = true;
+        pylsp.enable = true;
         # Nix server
         nil_ls.enable = true;
         # C/C++ server
