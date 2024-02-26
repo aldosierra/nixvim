@@ -19,6 +19,9 @@
     treesitter = {
       enable = true;
       indent = true;
+      nixvimInjections = true;
+      nixGrammars = false;
+      ensureInstalled = "all";
     };
 
     # Autotag
