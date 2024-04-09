@@ -1,5 +1,5 @@
 {
-  config.options = {
+  config.opts = {
     # Tabs
     tabstop = 2;
     softtabstop = 2;
@@ -21,5 +21,7 @@
     # Split windows
     splitbelow = true;
     splitright = true;
+    # Fold column
+    foldcolumn = "auto:6";
   };
 }

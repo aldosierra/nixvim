@@ -5,22 +5,24 @@
     bufferline = {
       enable = true;
       indicator.style = "underline";
-      # highlights.offsetSeparator = {
-      #   offsets = {
-      #     filetype = "NvimTree";
-      #     text = "Nvim Tree";
-      #     separator = true;
-      #     text_align = "left";
-      #   };
-      # };
+      diagnostics = "nvim_lsp";
+      offsets = [
+        {
+          filetype = "NvimTree";
+          text = "Nvim Tree";
+          separator = true;
+          text_align = "left";
+        }
+      ];
     };
 
     # Syntax highlighting
     treesitter = {
       enable = true;
       indent = true;
+      folding = true;
       nixvimInjections = true;
-      nixGrammars = false;
+      nixGrammars = true;
       ensureInstalled = "all";
     };
 
@@ -146,36 +148,33 @@
     };
 
     # Autocomplete
-    nvim-cmp = {
+    cmp = {
       enable = true;
       autoEnableSources = true;
-      sources = [
+      settings = {
+        sources = [
         { name = "nvim_lsp"; }
+        { name = "luasnip"; }
         { name = "path"; }
         { name = "buffer"; }
-      ];
-      mapping = {
-        "<C-Space>" = "cmp.mapping.complete()";
-        "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-        "<C-e>" = "cmp.mapping.close()";
-        "<C-f>" = "cmp.mapping.scroll_docs(4)";
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
-        "<S-Tab>" = {
-          action = "cmp.mapping.select_prev_item()";
-          modes = [
-            "i"
-            "s"
-          ];
+        ];
+        mapping = {
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-e>" = "cmp.mapping.close()";
+          "<C-f>" = "cmp.mapping.scroll_docs(4)";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<S-Tab>" = {
+            action = "cmp.mapping.select_prev_item()";
+            modes = [ "i" "s" ];
+          };
+          "<Tab>" = {
+            action = "cmp.mapping.select_next_item()";
+            modes = [ "i" "s" ];
+          };
         };
-        "<Tab>" = {
-          action = "cmp.mapping.select_next_item()";
-          modes = [
-            "i"
-            "s"
-          ];
-        };
+        snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
       };
-      snippet.expand = "luasnip";
     };
 
     # Snippet manager
