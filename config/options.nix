@@ -21,7 +21,7 @@
     # Split windows
     splitbelow = true;
     splitright = true;
-    # Fold column
-    foldcolumn = "auto:6";
+    # Fold options
+    foldlevelstart = 99;
   };
 }
