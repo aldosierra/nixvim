@@ -9,9 +9,9 @@
       offsets = [
         {
           filetype = "NvimTree";
-          text = "Nvim Tree";
+          text = "File explorer";
           separator = true;
-          text_align = "left";
+          text_align = "center";
         }
       ];
     };
@@ -42,31 +42,31 @@
       keymaps = {
         "<leader>ff" = {
           action = "find_files";
-          desc = "Telescope find files";
+          options.desc = "Telescope find files";
         };
         "<leader>fg" = {
           action = "live_grep";
-          desc = "Telescope live grep";
+          options.desc = "Telescope live grep";
         };
         "<leader>fs" = {
           action = "grep_string";
-          desc = "Telescope grep string";
+          options.desc = "Telescope grep string";
         };
         "<leader>fb" = {
           action = "buffers";
-          desc = "Telescope buffers files";
+          options.desc = "Telescope buffers files";
         };
         "<leader>fh" = {
           action = "help_tags";
-          desc = "Telescope help tags";
+          options.desc = "Telescope help tags";
         };
         "<leader>fp" = {
           action = "git_files";
-          desc = "Telescope git files";
+          options.desc = "Telescope git files";
         };
         "<leader>fm" = {
           action = "man_pages";
-          desc = "Telescope man pages";
+          options.desc = "Telescope man pages";
         };
       };
       extensions.fzf-native.enable = true;
@@ -164,14 +164,8 @@
           "<C-e>" = "cmp.mapping.close()";
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<S-Tab>" = {
-            action = "cmp.mapping.select_prev_item()";
-            modes = [ "i" "s" ];
-          };
-          "<Tab>" = {
-            action = "cmp.mapping.select_next_item()";
-            modes = [ "i" "s" ];
-          };
+          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })";
+          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })";
         };
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
       };
