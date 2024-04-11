@@ -7,6 +7,7 @@
     autoindent = true;
     expandtab = true;
     smarttab = true;
+    smartindent = true;
     # Mouse
     mouse = "a";
     # Line number
