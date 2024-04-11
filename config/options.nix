@@ -13,6 +13,7 @@
     # Line number
     number = true;
     relativenumber = true;
+    scrolloff = 10;
     # Search
     ignorecase = true;
     smartcase = true;
