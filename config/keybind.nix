@@ -15,6 +15,10 @@
     { mode = "n"; key = "<leader>wj"; action = "<C-w>j"; }
     { mode = "n"; key = "<leader>wk"; action = "<C-w>k"; }
     { mode = "n"; key = "<leader>wl"; action = "<C-w>l"; }
+    { mode = "n"; key = "<C-h>"; action = "<C-w>h"; }
+    { mode = "n"; key = "<C-j>"; action = "<C-w>j"; }
+    { mode = "n"; key = "<C-k>"; action = "<C-w>k"; }
+    { mode = "n"; key = "<C-l>"; action = "<C-w>l"; }
     # Close and save
     { mode = "n"; key = "<leader>wq"; action = "<cmd>q<CR>"; }
     { mode = "n"; key = "<leader>ww"; action = "<cmd>w<CR>"; }
@@ -36,5 +40,10 @@
     { mode = "n"; key = "<leader>x"; action = "<cmd>!chmod +x %<CR>"; options.silent = true; }
     # Toggle scope indent
     { mode = "n"; key = "<leader>ls"; action = "<cmd>IBLToggleScope<CR>"; }
+    # Toggle scope indent
+    { mode = "i"; key = "jk"; action = "<Esc>"; }
+    { mode = "i"; key = "kj"; action = "<Esc>"; }
+    # Clean hl search results
+    { mode = "n"; key = "<leader>ll"; action = "<cmd>nohlsearch<CR>"; }
   ];
 }
