@@ -110,6 +110,8 @@
         html.enable = true;
         # Markdown server
         marksman.enable = true;
+        # Go server
+        gopls.enable = true;
       };
       capabilities = ''
          vim.lsp.protocol.make_client_capabilities().textDocument.completion.completionItem.snippetSupport = true
