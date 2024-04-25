@@ -123,19 +123,18 @@
           vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
         end
       '';
-      onAttach = ''
-          local opts = {buffer = bufnr, remap = false}
-          vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
-          vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-          vim.keymap.set("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
-          vim.keymap.set("n", "<leader>[", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-          vim.keymap.set("n", "<leader>]", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-          vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", opts)
-          vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", opts)
-          vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts)
-          vim.keymap.set("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", opts)
-          vim.keymap.set("n", "<leader>lt", "<cmd>Lspsaga term_toggle<CR>", opts)
-      '';
+      keymaps.extra = [
+        { action = "<cmd>Lspsaga peek_definition<CR>"; key = "gd"; options.remap = false; }
+        { action =  "<cmd>Lspsaga hover_doc<CR>"; key = "K"; options.remap = false; }
+        { action =  "<cmd>Lspsaga show_line_diagnostics<CR>"; key = "<leader>ld"; options.remap = false; }
+        { action =  "<cmd>Lspsaga diagnostic_jump_next<CR>"; key = "<leader>["; options.remap = false; }
+        { action =  "<cmd>Lspsaga diagnostic_jump_prev<CR>"; key = "<leader>]"; options.remap = false; }
+        { action =  "<cmd>Lspsaga code_action<CR>"; key = "<leader>la"; options.remap = false; }
+        { action =  "<cmd>Lspsaga finder<CR>"; key = "<leader>lf"; options.remap = false; }
+        { action =  "<cmd>Lspsaga rename<CR>"; key = "<leader>lr"; options.remap = false; }
+        { action =  "<cmd>Lspsaga outline<CR>"; key = "<leader>lo"; options.remap = false; }
+        { action =  "<cmd>Lspsaga term_toggle<CR>"; key = "<leader>lt"; options.remap = false; }
+      ];
     };
 
     # Add symbols to lsp
