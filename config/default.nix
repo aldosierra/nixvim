@@ -5,6 +5,6 @@
     ./clipboard.nix
     ./keybind.nix
     ./colorscheme.nix
-    ./plugins.nix
+    ./plugins/default.nix
   ];
 }

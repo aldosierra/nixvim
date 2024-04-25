@@ -9,5 +9,6 @@
     ./autocomplete.nix
     ./gitsigns.nix
     ./neotree.nix
+    ./zen.nix
   ];
 }

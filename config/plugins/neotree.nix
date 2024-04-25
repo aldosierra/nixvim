@@ -1,9 +1,6 @@
 {
   plugins.neo-tree = {
     enable = true;
+    closeIfLastWindow = true;
   };
-
-  keymaps = [
-    { mode = "n"; key = "<leader>fe"; action = "<cmd>Neotree filesystem toggle right<CR>"; }
-  ];
 }
