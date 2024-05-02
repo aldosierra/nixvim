@@ -1,6 +1,6 @@
 {
   plugins.bufferline = {
-    enable = true;
+    enable = false;
     indicator.style = "underline";
     diagnostics = "nvim_lsp";
     offsets = [
