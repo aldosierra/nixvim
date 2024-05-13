@@ -6,7 +6,7 @@
     ./indent.nix
     ./telescope.nix
     ./lsp.nix
-    ./autocomplete.nix
+    ./cmp.nix
     ./gitsigns.nix
     ./neotree.nix
     ./zen.nix
