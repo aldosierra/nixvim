@@ -33,7 +33,7 @@
     # Autopairs
     nvim-autopairs = {
       enable = true;
-      checkTs = true;
+      settings.check_ts = true;
     };
   };
 

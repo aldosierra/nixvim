@@ -1,8 +1,10 @@
 {
   colorschemes.catppuccin = {
     enable = true;
-    flavour = "mocha";
-    terminalColors = true;
-    transparentBackground = true;
+    settings = {
+      flavour = "mocha";
+      term_colors = true;
+      transparent_background = true;
+    };
   };
 }
