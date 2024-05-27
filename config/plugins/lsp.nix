@@ -46,6 +46,7 @@
         { action =  "<cmd>Lspsaga rename<CR>"; key = "<leader>lr"; options.remap = false; }
         { action =  "<cmd>Lspsaga outline<CR>"; key = "<leader>lo"; options.remap = false; }
         { action =  "<cmd>Lspsaga term_toggle<CR>"; key = "<leader>lt"; options.remap = false; }
+        { action =  "vim.lsp.buf.format"; key = "<leader>lF"; options.remap = false; }
       ];
     };
 
