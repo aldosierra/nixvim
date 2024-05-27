@@ -9,7 +9,7 @@
         # Lua server
         lua-ls.enable = true;
         # Python server
-        pylsp.enable = true;
+        pyright.enable = true;
         # Nix server
         nil_ls.enable = true;
         # C/C++ server
@@ -37,7 +37,7 @@
       '';
       keymaps.extra = [
         { action = "<cmd>Lspsaga peek_definition<CR>"; key = "gd"; options.remap = false; }
-        { action =  "<cmd>Lspsaga hover_doc<CR>"; key = "K"; options.remap = false; }
+        { action =  "<cmd>Lspsaga hover_doc<CR>"; key = "K"; options.remap = false; mode = "n"; }
         { action =  "<cmd>Lspsaga show_line_diagnostics<CR>"; key = "<leader>ld"; options.remap = false; }
         { action =  "<cmd>Lspsaga diagnostic_jump_next<CR>"; key = "<leader>["; options.remap = false; }
         { action =  "<cmd>Lspsaga diagnostic_jump_prev<CR>"; key = "<leader>]"; options.remap = false; }

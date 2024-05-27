@@ -10,5 +10,7 @@
     ./gitsigns.nix
     ./neotree.nix
     ./zen.nix
+    ./none-ls.nix
+    ./undotree.nix
   ];
 }

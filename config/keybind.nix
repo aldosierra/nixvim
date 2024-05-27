@@ -40,9 +40,6 @@
     { mode = "n"; key = "<leader>x"; action = "<cmd>!chmod +x %<CR>"; options.silent = true; }
     # Toggle scope indent
     { mode = "n"; key = "<leader>ls"; action = "<cmd>IBLToggleScope<CR>"; }
-    # Toggle scope indent
-    { mode = "i"; key = "jk"; action = "<Esc>"; }
-    { mode = "i"; key = "kj"; action = "<Esc>"; }
     # Clean hl search results
     { mode = "n"; key = "<leader>ll"; action = "<cmd>nohlsearch<CR>"; }
   ];
