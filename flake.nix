@@ -2,16 +2,13 @@
   description = "A nixvim configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
-    nixvim,
-    flake-parts,
-    ...
-  } @ inputs: let
+  outputs = { nixvim, flake-parts, ... } @ inputs:
+  let
     config = import ./config; # import the module directly
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -22,11 +19,8 @@
         "aarch64-darwin"
       ];
 
-      perSystem = {
-        pkgs,
-        system,
-        ...
-      }: let
+      perSystem = { pkgs, system, ... }:
+      let
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
