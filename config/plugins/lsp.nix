@@ -27,7 +27,7 @@
         # Json server
         jsonls.enable = true;
       };
-      capabilities = ''
+      capabilities = /*lua*/ ''
          require("cmp_nvim_lsp").default_capabilities()
       '';
       postConfig = ''
