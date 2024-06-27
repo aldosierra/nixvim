@@ -24,6 +24,8 @@
         marksman.enable = true;
         # Go server
         gopls.enable = true;
+        # Json server
+        jsonls.enable = true;
       };
       capabilities = ''
          require("cmp_nvim_lsp").default_capabilities()
