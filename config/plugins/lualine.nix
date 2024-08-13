@@ -41,17 +41,17 @@ in
       lualine_a = [ { name = "mode"; separator.left = ""; padding = {right = 2; left = 1; }; } ];
       lualine_b = [ "filename" "branch" ];
       lualine_c = [ "%=" ];
-      lualine_x = null;
+      lualine_x = [ "%=" ];
       lualine_y = [ "filetype" "progress" ];
       lualine_z = [ { name = "location"; separator.right = ""; padding = {left = 2; right = 1; }; } ];
     };
     inactiveSections = {
-      lualine_a = [ "filename" ];
+      lualine_a = null;
       lualine_b = null;
       lualine_c = null;
       lualine_x = null;
       lualine_y = null;
-      lualine_z = [ "location" ];
+      lualine_z = null;
     };
   };
 }
