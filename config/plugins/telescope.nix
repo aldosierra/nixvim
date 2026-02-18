@@ -2,33 +2,33 @@
   plugins.telescope = {
     enable = true;
     keymaps = {
-      "<leader>ff" = {
+      "<leader>sf" = {
         action = "find_files";
-        options.desc = "Telescope find files";
+        options.desc = "[S]earch [F]iles";
       };
-      "<leader>fg" = {
+      "<leader>sg" = {
         action = "live_grep";
-        options.desc = "Telescope live grep";
+        options.desc = "[S]earch live [G]rep";
       };
-      "<leader>fs" = {
+      "<leader>ss" = {
         action = "grep_string";
-        options.desc = "Telescope grep string";
+        options.desc = "[S]earch grep [S]tring";
       };
-      "<leader>fb" = {
+      "<leader>sb" = {
         action = "buffers";
-        options.desc = "Telescope buffers files";
+        options.desc = "[S]earch [B]uffers files";
       };
-      "<leader>fh" = {
+      "<leader>sh" = {
         action = "help_tags";
-        options.desc = "Telescope help tags";
+        options.desc = "[S]earch [H]elp tags";
       };
-      "<leader>fp" = {
+      "<leader>sp" = {
         action = "git_files";
-        options.desc = "Telescope git files";
+        options.desc = "[S]earch [P]roject (git) files";
       };
-      "<leader>fm" = {
+      "<leader>sm" = {
         action = "man_pages";
-        options.desc = "Telescope man pages";
+        options.desc = "[S]earch [M]an pages";
       };
     };
     extensions.fzf-native.enable = true;

@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins = {
     # Main lsp
@@ -5,9 +6,9 @@
       enable = true;
       servers = {
         # Javascript / typescript server
-        tsserver.enable = true;
+        # ts_ls.enable = true;
         # Lua server
-        lua-ls.enable = true;
+        lua_ls.enable = true;
         # Python server
         pyright.enable = true;
         # Nix server
@@ -15,7 +16,7 @@
         # C/C++ server
         clangd.enable = true;
         # Bash server
-        bashls.enable = true;
+        # bashls.enable = true;
         # Emmet server
         emmet_ls.enable = true;
         # HTML Server
@@ -58,9 +59,11 @@
     # Add lsp saga
     lspsaga = {
       enable = true;
-      lightbulb.sign = false;
-      outline.autoClose = true;
-      codeAction.extendGitSigns = true;
+      settings = {
+        lightbulb.sign = false;
+        outline.auto_close = true;
+        codeAction.extend_git_signs = true;
+      };
     };
   };
 }

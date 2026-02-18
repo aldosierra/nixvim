@@ -12,46 +12,48 @@ in
 {
   plugins.lualine = {
     enable = true;
-    globalstatus = true;
-    iconsEnabled = true;
-    theme = {
-      normal = {
-        a = { fg = colors.black; bg = colors.blue; };
-        b = { fg = colors.white; bg = colors.black; };
-        c = { fg = colors.white; };
+    settings = {
+      globalstatus = true;
+      iconsEnabled = true;
+      theme = {
+        normal = {
+          a = { fg = colors.black; bg = colors.blue; };
+          b = { fg = colors.white; bg = colors.black; };
+          c = { fg = colors.white; };
+        };
+        insert = { a = { fg = colors.black; bg = colors.cyan; }; };
+        visual = { a = { fg = colors.black; bg = colors.violet; }; };
+        replace = { a = { fg = colors.black; bg = colors.red; }; };
+        inactive = {
+          a = { fg = colors.white; bg = colors.black; };
+          b = { fg = colors.white; bg = colors.black; };
+          c = { fg = colors.white; };
+        };
       };
-      insert = { a = { fg = colors.black; bg = colors.cyan; }; };
-      visual = { a = { fg = colors.black; bg = colors.violet; }; };
-      replace = { a = { fg = colors.black; bg = colors.red; }; };
-      inactive = {
-        a = { fg = colors.white; bg = colors.black; };
-        b = { fg = colors.white; bg = colors.black; };
-        c = { fg = colors.white; };
+      componentSeparators = {
+        left = "";
+        right = "";
       };
-    };
-    componentSeparators = {
-      left = "";
-      right = "";
-    };
-    sectionSeparators = {
-      left = "";
-      right = "";
-    };
-    sections = {
-      lualine_a = [ { name = "mode"; separator.left = ""; padding = {right = 2; left = 1; }; } ];
-      lualine_b = [ "filename" "branch" ];
-      lualine_c = [ "%=" ];
-      lualine_x = [ "%=" ];
-      lualine_y = [ "filetype" "progress" ];
-      lualine_z = [ { name = "location"; separator.right = ""; padding = {left = 2; right = 1; }; } ];
-    };
-    inactiveSections = {
-      lualine_a = null;
-      lualine_b = null;
-      lualine_c = null;
-      lualine_x = null;
-      lualine_y = null;
-      lualine_z = null;
+      sectionSeparators = {
+        left = "";
+        right = "";
+      };
+      sections = {
+        lualine_a = [ { __unkeyed-1 = "mode"; separator.left = ""; padding = {right = 2; left = 1; }; } ];
+        lualine_b = [ "filename" "branch" ];
+        lualine_c = [ "%=" ];
+        lualine_x = [ "%=" ];
+        lualine_y = [ "filetype" "progress" ];
+        lualine_z = [ { __unkeyed-2 = "location"; separator.right = ""; padding = {left = 2; right = 1; }; } ];
+      };
+      inactiveSections = {
+        lualine_a = null;
+        lualine_b = null;
+        lualine_c = null;
+        lualine_x = null;
+        lualine_y = null;
+        lualine_z = null;
+      };
     };
   };
 }

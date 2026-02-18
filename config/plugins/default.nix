@@ -12,5 +12,7 @@
     ./zen.nix
     ./none-ls.nix
     ./undotree.nix
+    ./web-icons.nix
+    ./which-key.nix
   ];
 }

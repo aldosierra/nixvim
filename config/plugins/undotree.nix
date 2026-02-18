@@ -2,6 +2,6 @@
   plugins.undotree.enable = true;
 
   keymaps = [
-    { mode = "n"; key = "<leader>fu"; action = "<cmd>UndotreeToggle<CR>"; }
+    { mode = "n"; key = "<leader>tu"; action = "<cmd>UndotreeToggle<CR>"; }
   ];
 }
